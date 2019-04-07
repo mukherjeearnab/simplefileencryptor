@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1554544130 source:/home/quinn/Videos/FileEncryption/main.c
+	<sys/ioctl.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	"conio.h"
+	"putil.h"
+	"iencrypt.h"
+
+1554535719 /home/quinn/Videos/FileEncryption/conio.h
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+
+1554538699 /home/quinn/Videos/FileEncryption/putil.h
+	<sys/ioctl.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+
+1554544305 /home/quinn/Videos/FileEncryption/iencrypt.h
+	<sys/ioctl.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	"conio.h"
+	"putil.h"
+
