@@ -15,7 +15,7 @@ void Encrypt(char fname[100], int PIN)
     TerminalDimentions(&dim);
 
     char ch, encFileName[150];
-	FILE *fps, *fpt;
+    FILE *fps, *fpt;
     int FSize = FileSize(fname);
     strcpy(encFileName, fname);
     strcat(encFileName, ".Encrypted");
@@ -25,13 +25,13 @@ void Encrypt(char fname[100], int PIN)
 	{
 		PrintMiddle("Error in opening source file..!!", 15);
 		fclose(fps);
-    }
+    	}
 	fpt = fopen(encFileName, "w");
 	if(fpt == NULL)
 	{
 		PrintMiddle("Error in opening temp.txt file..!!", 16);
 		fclose(fps);
-    }
+   	}
 
 	if(fps != NULL && fpt != NULL)
 	{
@@ -52,9 +52,7 @@ void Encrypt(char fname[100], int PIN)
             {
                 ch = ch + PIN;
                 fputc(ch, fpt);
-
-
-                //CleanRow(16);
+                
                 if(seek % 1234 == 0 || seek == FSize)
                  {
                     sprintf(seeks, "%d", seek);
@@ -84,10 +82,9 @@ void Decrypt(char fname[100], int PIN)
     TerminalDimentions(&dim);
 
     char ch, encFileName[150];
-	FILE *fps, *fpt;
+    FILE *fps, *fpt;
     int FSize = FileSize(fname);
     strcpy(encFileName, fname);
-    //strcat(encFileName, ".Encrypted");
     for(int a = strlen(encFileName) - 1; a >= 0 ; a--)
     {
         if(encFileName[a] == '.')
@@ -101,13 +98,13 @@ void Decrypt(char fname[100], int PIN)
 	{
 		PrintMiddle("Error in opening source file..!!", 15);
 		fclose(fps);
-    }
+    	}
 	fpt = fopen(encFileName, "w");
 	if(fpt == NULL)
 	{
 		PrintMiddle("Error in opening temp.txt file..!!", 16);
 		fclose(fps);
-    }
+    	}
 
 	if(fps != NULL && fpt != NULL)
 	{
@@ -129,8 +126,6 @@ void Decrypt(char fname[100], int PIN)
                 ch = ch - PIN;
                 fputc(ch, fpt);
 
-
-                //CleanRow(16);
                 if(seek % 1234 == 0 || seek == FSize)
                  {
                     sprintf(seeks, "%d", seek);
@@ -140,11 +135,6 @@ void Decrypt(char fname[100], int PIN)
                     strcat(statement, seeks);
                     PrintMiddle(statement, 16);
                  }
-                /*if(((seek/FSize)* 100) == ((progress/dim[0])*100))
-                {
-                    printf("=");
-                    progress++;
-                }*/
             }
         }
         fclose(fps);
