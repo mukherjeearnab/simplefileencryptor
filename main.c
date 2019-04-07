@@ -132,10 +132,6 @@ void About()
     PrintMiddle("Created by - Arnab Mukherjee", 8);
     PrintMiddle("Created on Saturday, 6th April, 2019", 9);
     PrintMiddle("Language - C", 10);
-    PrintMiddle("Roll No - CSE 2018/053", 13);
-    PrintMiddle("1st Year, 2nd Semester", 14);
-    PrintMiddle("Stream - CSE", 15);
-    PrintMiddle("College - RCC Institute Of Information Technology", 16);
     getch();
     MainMenu();
 }
